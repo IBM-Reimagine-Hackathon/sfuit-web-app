@@ -1,0 +1,78 @@
+.verify-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.verify-body{
+    position: absolute;
+    height: 25rem;
+    width: 25rem;
+    background-color: aliceblue;
+    border-radius: 15px;
+    box-shadow: -4px 4px 4px 4px rgba(0,0,0,0.08);
+}
+
+.verify-body h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #141641;
+    margin-top: 2.5rem;
+}
+
+.verify-body i{
+    position: absolute;
+    font-size: 5rem;
+    color: #141641;
+    margin-top: 2.5rem;
+    margin-left: 9.5rem;
+}
+
+.verify-body p{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10rem;
+}
+
+@media screen and (max-width: 920px) {
+    .verify-body{
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .verify-body i{
+        margin-left: 7.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .verify-body p{
+        margin-top: 8rem;
+        padding: 5px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .verify-body{
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .verify-body h1{
+        font-size: 1rem;
+    }
+
+    .verify-body i{
+        font-size: 3rem;
+        margin-top: 1.5rem;
+        margin-left: 6rem;
+    }
+
+    .verify-body p{
+        font-size: 0.8rem;
+        margin-top: 6rem;
+    }
+}

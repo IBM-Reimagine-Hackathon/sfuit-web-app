@@ -1,0 +1,150 @@
+    .title-1 {
+    font-size: 10rem;
+    text-align: start;
+    color: #141641;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    }
+
+    .subtitle-1 {
+        font-size: 25px;
+        text-align: start;
+        color: #141641;
+        margin-left: 5.5rem;
+    }
+
+    .form-img-1 {
+    width: 45vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    right: -22.5%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 0 5rem;
+    width: 25vw;
+  }
+  
+  .form-inputs-1 {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .form-inputs-1 p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: #f00e0e;
+  }
+  
+  .form-input-1 {
+    display: block;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 15px;
+    height: 45px;
+    width: 100%;
+    border: 1px solid #9a9191;
+  }
+  
+  .form-input-1::placeholder {
+    color: #9a9191;
+    font-size: 12px;
+  }
+  
+  .form-input-btn-1 {
+    width: 50%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 30px;
+    background: #141641;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .form-input-btn-1 button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    outline: none;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-input-login-1 {
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: #141641;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .form-input-login-1 a {
+    text-decoration: none;
+    color: #141641;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 960px){
+    button{
+      display: block;
+    }
+    .form-img-1{
+        display: none;
+    }
+
+    .form-content-right-1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      
+    .title-1 {
+        font-size: 6rem;
+        margin: 0;
+        margin-top: 5rem;
+        text-align: center;
+    }
+    
+    .subtitle-1 {
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .form-1 {
+        width: 70vw;
+        margin: 35rem 0 0 0;
+    }
+  
+  }
+
+  
+  @media screen and (max-width: 360px){
+    .title-1 {
+        margin-top: 3rem;
+    }
+
+    .form-1 {
+        width: 90vw;
+        margin: 30rem 0 0 0;
+    }
+  }
