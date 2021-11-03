@@ -1,5 +1,6 @@
 import React from "react";
 import Board from "../../Components/Board/Board";
+import RightBar from "../../Components/RightBar/RightBar";
 import SideBar from "../../Components/SideBar/SideBar";
 
 function Dashboard() {
@@ -7,6 +8,7 @@ function Dashboard() {
     <div>
       <SideBar />
       <Board />
+      <RightBar />
     </div>
   );
 }

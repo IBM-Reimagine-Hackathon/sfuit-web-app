@@ -11,7 +11,7 @@ body{
     width: 25vw;
     height: 100vh;
     background-color: #141641;
-    z-index: -1;
+    z-index: 0;
 }
 
 .sidebar-container .logo{
@@ -20,6 +20,7 @@ body{
     letter-spacing: 0.5rem;
     margin-left: 2vw;
     padding-top: 5vh;
+    cursor: pointer;
 }
 
 .sidebar-container .logo span{
@@ -37,6 +38,7 @@ body{
     color: #fff;
     font-size: 1rem;
     margin: 0 0 2rem 0;
+    cursor: pointer;
 }
 
 .sidebar-container .nav-list .nav-items .fas{
@@ -46,7 +48,8 @@ body{
 .sidebar-container .line-divide{
     height: 0.01rem;
     background-color: #fff;
-    margin-top: 55vh;
+    position: relative;
+    margin-top: 50vh;
 }
 
 .sidebar-container .profile-container{
@@ -77,10 +80,42 @@ body{
 
 .sidebar-container .profile-container .profile-details .profile-name .fas{
     margin-left: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s all;
 }
 
 .sidebar-container .profile-container .profile-details .profile-age{
     font-size: 0.85rem;
     color: #828282;
     margin: 0.2rem 0 0 0;
+}
+
+.sidebar-container .profile-container .logout{
+    transition: 1s all;
+    display: none;
+}
+
+.sidebar-container .profile-container .show{
+    transition: 1s all;
+    display: block;
+}
+
+.sidebar-container .profile-container .logout ul{
+    list-style: none;
+    margin-left: 4vw;
+}
+
+.sidebar-container .profile-container .logout ul li{
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sidebar-container .profile-container .logout ul li .fas{
+    margin-right: 0.5rem;
+}
+
+.sidebar-container .profile-container .profile-details .profile-name .active{
+    transform: rotateZ(180deg);
+    transition: 0.5s all;
 }
