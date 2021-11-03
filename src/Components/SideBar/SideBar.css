@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar-container{
+    width: 25vw;
+    height: 100vh;
+    background-color: #141641;
+}
+
+.sidebar-container .logo{
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin-left: 2vw;
+    padding-top: 5vh;
+}
+
+.sidebar-container .logo span{
+    color: #ff0000;
+}
+
+.sidebar-container .nav-list{
+    list-style: none;
+    margin: 0;
+    margin-left: -0.8vw;
+    padding-top: 7vh;
+}
+
+.sidebar-container .nav-list .nav-items{
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+.sidebar-container .nav-list .nav-items .fas{
+    margin-right: 1rem;
+}
+
+.sidebar-container .line-divide{
+    height: 0.01rem;
+    background-color: #fff;
+    bottom: 0;
+}
+
+.sidebar-container .profile-container{
+    position: absolute;
+    bottom: 0;
+}
+
+.sidebar-container .profile-container .profile-picture{
+    position: absolute;
+    padding: 1rem 1.2rem;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-top: 2.5vh;
+}
+
+.sidebar-container .profile-container .profile-details{
+    position: relative;
+    list-style: none;
+    margin-left: 3vw;
+    padding-top: 1vh;
+}
+
+.sidebar-container .profile-container .profile-details .profile-name{
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.sidebar-container .profile-container .profile-details .profile-name .fas{
+    margin-left: 0.5rem;
+}
+
+.sidebar-container .profile-container .profile-details .profile-age{
+    font-size: 0.85rem;
+    color: #828282;
+    margin: 0.2rem 0 0 0;
+}
