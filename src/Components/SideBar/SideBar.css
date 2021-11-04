@@ -6,6 +6,16 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.show{
+    display: block;
+    transition: 0.3s all;
+}
+
+.hide{
+    display: none;
+    transition: 0.3s all;
+}
+
 .sidebar-container{
     position: absolute;
     width: 25vw;
@@ -43,6 +53,15 @@ body{
 
 .sidebar-container .nav-list .nav-items .fas{
     margin-right: 1rem;
+}
+
+.sidebar-container .nav-list .nav-items .fas .fa-circle{
+    position: absolute;
+    margin: 0;
+    font-size: 0.6rem;
+    color: red;
+    margin-left: -0.5rem;
+    margin-top: -3px;
 }
 
 .sidebar-container .nav-list .nav-items .pointer{
