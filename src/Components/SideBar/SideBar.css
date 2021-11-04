@@ -45,6 +45,17 @@ body{
     margin-right: 1rem;
 }
 
+.sidebar-container .nav-list .nav-items .pointer{
+    position: absolute;
+    background-color: #fff;
+    width: 1px;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-top: -3.5vh;
+    margin-left: 49%;
+    user-select: none;
+}
+
 .sidebar-container .line-divide{
     height: 0.01rem;
     background-color: #fff;

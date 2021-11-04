@@ -13,7 +13,7 @@ const SideBar = () => {
     <div className="sidebar-container">
       <div className="logo">S<span>f</span>UIT</div>
       <ul className="nav-list">
-        <li className="nav-items"><i className="fas fa-home"></i>Home</li>
+        <li className="nav-items"><i className="fas fa-home"></i>Home <div className="pointer"></div></li>
         <li className="nav-items"><i className="fas fa-bell"></i>Notifications</li>
         <li className="nav-items"><i className="fas fa-chart-line"></i>Analysis</li>
       </ul>

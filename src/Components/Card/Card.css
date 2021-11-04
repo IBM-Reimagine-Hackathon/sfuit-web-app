@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-container{
+    position: relative;
+    margin: auto;
+    margin-left: 5vw;
+}
+
+.card-container .card{
+    width: 15vw;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 1rem;
+}
+
+.card-container .icon{
+    position: absolute;
+    color: #141641;
+    font-size: 2rem;
+    margin-top: 4vh;
+    margin-left: 1.5vw;
+    user-select: none;
+}
+
+.card-container .details{
+    color: #141641;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.card-container .details .name{
+    margin-left: 5vw;
+    padding-top: 3vh;
+    font-weight: 600;
+}
+
+.card-container .details .timing{
+    margin-left: 5vw;
+    padding-top: 0.2rem;
+    font-weight: 600;
+}
+
+.card-container .details .doctor{
+    margin-left: 5vw;
+    padding-top: 0.2rem;
+    font-weight: 600;
+    padding-bottom: 3vh;
+}
+
+.card-container .next{
+    text-align: right;
+    padding: 0.2rem 1rem;
+    background-color: #fff;
+    width: 0.5vw;
+    margin-left: auto;
+    border-bottom-right-radius: 17px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.card-container .next .fas{
+    color: #141641;
+    font-size: 1rem;
+}
+
+.card-container .card:hover{
+    background-color: #141641;
+    transition: 0.3s all;
+}
+
+.card-container .card:hover .icon{
+    color: #fff;
+    transition: 0.3s all;
+}
+
+.card-container .card:hover .details{
+    color: #fff;
+    transition: 0.3s all;
+}
+
+.card-container .card:hover .details .doctor{
+    padding-bottom: 0;
+}
+
+.card-container .card:hover .next{
+    display: block;
+    transition: 0.3s all;
+}
