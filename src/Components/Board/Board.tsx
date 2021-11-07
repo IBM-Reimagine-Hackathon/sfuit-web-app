@@ -15,27 +15,27 @@ function Board() {
                 <div className='date'>{month}, {day}</div>
             </div>
             <div className='first-row'>
-                <div className='card'>
+                <div className='card temp'>
                     <div className='name'>Temperature</div>
                     <div className='value'>37<sup><span className='sup'></span></sup>C</div>
                 </div>
-                <div className='card'>
+                <div className='card oxy'>
                     <div className='name'>Oxygen</div>
                     <div className='value'>98</div>
                 </div>
-                <div className='card'>
+                <div className='card time'>
                     <div className='name'>Time Spent</div>
                     <div className='value'>2h 36m</div>
                 </div>
             </div>
             <div className='second-row'>
-                <div className='card'>
+                <div className='card pulse'>
                     <div className='name'>Pulse</div>
                     <div className='semi-circle'></div>
                     <div className='quarter-circle'></div>
                     <div className='value move-bottom'>99 <sub>bpm</sub></div>
                 </div>
-                <div className='card'>
+                <div className='card steps'>
                     <div className='name'>Steps</div>
                     <div className='value'><i className="fas fa-shoe-prints"></i> 347 <sub>steps</sub></div>
                 </div>

@@ -16,6 +16,10 @@ body{
     transition: 0.3s all;
 }
 
+.menu-icons{
+    display: none;
+}
+
 .sidebar-container{
     position: absolute;
     width: 25vw;
@@ -33,7 +37,7 @@ body{
     cursor: pointer;
 }
 
-.sidebar-container .logo span{
+span{
     color: #ff0000;
 }
 
@@ -145,7 +149,73 @@ body{
     margin-right: 0.5rem;
 }
 
-.sidebar-container .profile-container .profile-details .profile-name .active{
+.sidebar-container .profile-container .profile-details .profile-name .up{
     transform: rotateZ(180deg);
     transition: 0.5s all;
+}
+
+@media screen and (max-width: 960px) {
+    nav .sidebar-container{
+        display: none;
+    }
+
+    nav{
+        width: 100vw;
+        height: 7vh;
+        background-color: #f8f4f4;
+    }
+
+    nav.active .sidebar-container{
+        display: block;
+        transition: 0.5s all;
+        z-index: 2;
+        width: 60vw;
+        height: 86vh;
+        margin-top: 7vh;
+    }
+
+    nav .sidebar-container .logo{
+        font-size: 2rem;
+        margin-left: 10vw;
+    }
+
+    .menu-icons{
+        position: absolute;
+        display: block;
+    }
+
+    .menu-icons .fa-bars{
+        font-size: 2rem;
+        color: #141641;
+        margin: 1.5vh;
+    }
+
+    .menu-icons .fa-times{
+        font-size: 2rem;
+        color: #141641;
+        margin: 1.5vh;
+        display: none;
+    }
+
+    nav.active .fa-times{
+        display: block;
+        position: absolute;
+    }
+
+    nav.active .fa-bars{
+        display: none;
+    }
+
+    nav .sidebar-container .nav-list .nav-items .pointer{
+        display: none;
+    }
+    
+    .sidebar-container .profile-container .profile-details{
+        margin-left: 10vw;
+    }
+    
+    .sidebar-container .profile-container .logout ul{
+        list-style: none;
+        margin-left: 12vw;
+    }
 }

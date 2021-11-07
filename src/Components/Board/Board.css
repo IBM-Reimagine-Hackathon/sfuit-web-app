@@ -8,11 +8,12 @@ body{
 
 .board-container{
     position: absolute;
-    width: 65vw;
+    width: 85vw;
     height: 100vh;
     background-color: #fff;
     margin-left: 15vw;
-    border-radius: 45px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
     z-index: 1;
 }
 
@@ -20,7 +21,7 @@ body{
     color: #141641;
     font-size: 2rem;
     padding-top: 5vh;
-    padding-left: 3vw;
+    padding-left: 15vw;
     position: absolute;
 }
 
@@ -189,4 +190,69 @@ body{
     font-size: 1rem;
     text-align: center;
     padding-top: 1.5vh;
+}
+
+@media screen and (max-width: 960px) {
+
+    .board-container{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .board-container .board-heading{
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        margin: -2.7rem 15vw;
+        font-size: 1.8rem;
+    }
+    
+    .board-container .time-container{
+        display: none;
+    }
+
+    .board-container .first-row{
+        width: 90vw;
+        padding-top: 2vh;
+    }
+    
+    .board-container .first-row .temp,
+    .board-container .first-row .oxy{
+        width: 35vw;
+        height: 15vh;
+        margin: 1rem;
+    }
+
+    .board-container .first-row .time{
+        width: 70vw;
+        margin-left: 7vw;
+        margin-right: 0;
+    }
+
+    .board-container .second-row{
+        width: 90vw;
+        padding-top: 2vh;
+    }
+    
+    .board-container .second-row .pulse,
+    .board-container .second-row .steps{
+        width: 35vw;
+        height: 15vh;
+        margin: 1rem;
+    }
+
+    .board-container .third-row{
+        width: 90vw;
+        padding-top: 2vh;
+    }
+    
+    .board-container .third-row .card{
+        width: 100%;
+        height: 35vh;
+        margin-right: 0;
+    }
+    
 }

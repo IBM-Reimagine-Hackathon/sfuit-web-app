@@ -61,3 +61,14 @@ body{
     height: 1px;
     background-color: #fff;
 }
+
+@media screen and (max-width: 960px) {
+
+    .overlay-container{
+        width: 50vw;
+        height: 75vh;
+        margin-left: 47vw;
+        margin-top: 11vh;
+    }
+    
+}
