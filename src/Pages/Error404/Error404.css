@@ -1,0 +1,16 @@
+.error h1 {
+    font-size: 8rem;
+    text-align: center;
+}
+
+.error p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.error .link{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #141641;
+    transform: translate(50%, 50%);
+}

@@ -1,16 +1,16 @@
     .title-1 {
     font-size: 10rem;
-    text-align: start;
     color: #141641;
     margin-left: 5rem;
     margin-top: 5rem;
+    letter-spacing: -15px;
     }
 
     .subtitle-1 {
-        font-size: 25px;
-        text-align: start;
-        color: #141641;
-        margin-left: 5.5rem;
+      font-size: 1.5rem;
+      color: #141641;
+      margin-left: 5.7rem;
+      margin-top: -7rem;
     }
 
     .form-img-1 {
@@ -49,8 +49,8 @@
     padding-left: 10px;
     outline: none;
     border-radius: 15px;
-    height: 45px;
-    width: 100%;
+    height: 0.2rem;
+    width: 90%;
     border: 1px solid #9a9191;
   }
   
@@ -122,6 +122,7 @@
         margin: 0;
         margin-top: 5rem;
         text-align: center;
+        letter-spacing: normal;
     }
     
     .subtitle-1 {
@@ -132,7 +133,11 @@
 
     .form-1 {
         width: 70vw;
-        margin: 35rem 0 0 0;
+        margin: 30rem 0 0 0;
+    }
+
+    .form-input-login-1{
+      width: 70vw;
     }
   
   }

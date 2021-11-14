@@ -1,21 +1,26 @@
 import React, {useEffect} from 'react';
 import useForm from './useForm';
 import validateInfo from './validateInfo';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './Register.css'
 
-function SignUp({submitForm, history}:{submitForm : any; history : any}){
+const current = new Date().toISOString().split("T")[0];
+
+function SignUp({submitForm}:{submitForm : any;}){
     const {handleChange, values, handleSubmit, errors, success} = useForm(
         submitForm, 
         validateInfo
     );
+    let history = useHistory();
 
     useEffect(() => {
       errors.message && toast.error(errors.message);
       errors.email && toast.error(errors.email);
       errors.name && toast.error(errors.name);
+      errors.dob && toast.error(errors.dob);
+      errors.phone && toast.error(errors.phone)
       errors.password && toast.error(errors.password);
       errors.confirmPassword && toast.error(errors.confirmPassword);
     }, [errors]);
@@ -55,6 +60,36 @@ function SignUp({submitForm, history}:{submitForm : any; history : any}){
                         required 
                         placeholder="Name" 
                         value={values.name} 
+                        onChange={handleChange}
+                    ></input>
+                    {errors.name && <p>{errors.name}</p>}
+                </div>
+                <div className="form-inputs">
+                    <input 
+                        id="dob" 
+                        type="date" 
+                        name="dob" 
+                        autoComplete="off" 
+                        className="form-input" 
+                        style={{textAlign: "left", padding: "20px"}} 
+                        required 
+                        value={values.dob} 
+                        onChange={handleChange}
+                        max={current}
+                    ></input>
+                    {errors.name && <p>{errors.name}</p>}
+                </div>
+                <div className="form-inputs">
+                    <input 
+                        id="phone" 
+                        type="text" 
+                        name="phone" 
+                        autoComplete="off" 
+                        className="form-input" 
+                        style={{textAlign: "left", padding: "20px"}} 
+                        required 
+                        placeholder="Phone Number" 
+                        value={values.phone} 
                         onChange={handleChange}
                     ></input>
                     {errors.name && <p>{errors.name}</p>}

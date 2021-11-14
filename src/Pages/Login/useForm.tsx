@@ -20,18 +20,16 @@ const useForm = (callback: () => void, validateInfo: (arg0: { email: string; pas
   };
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
     setErrors(validateInfo(values));
-    
     AxiosInstance.post("/login", {
       email: values.email,
       password: values.password,
     })
       .then((resp) => {
         if (resp.status === 200) {
-          AxiosInstance.defaults.headers.common[
-            "Authorization"
-          ] = `Bearer ${resp.data.token}`;
-          localStorage.setItem("sfuit", JSON.stringify(resp.data.message));
+         
+          localStorage.setItem("sfuit", JSON.stringify({token:resp.data.token}));
           setSuccess(true);
         } else {
           setErrors({ message: resp.data.message });

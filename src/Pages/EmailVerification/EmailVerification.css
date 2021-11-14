@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+
 .verify-container{
     height: 100vh;
     width: 100vw;
@@ -35,6 +37,22 @@
     text-align: center;
     font-size: 1rem;
     margin-top: 10rem;
+}
+
+.verify-body button{
+    background-color: #141641;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    margin-left: 8vw;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.verify-body .button{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
 @media screen and (max-width: 920px) {

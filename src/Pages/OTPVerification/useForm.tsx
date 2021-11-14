@@ -1,10 +1,10 @@
 import { useState, useEffect, SetStateAction } from "react";
 import { AxiosInstance } from "../../AxiosInstance";
 
-const useForm = (callback: () => void, validateInfo: { (values: any): {}; (arg0: { password: string; confirmPassword: string; }): SetStateAction<{}>; }) => {
+const useForm = (callback: () => void, validateInfo: (arg0: { otp: string; }) => SetStateAction<{}>) => {
     const [values, setValues] = useState({
-        password: '',
-        confirmPassword: ''
+        email: '',
+        otp: '',
     })
 
     const [errors, setErrors] = useState<any>({});
@@ -20,15 +20,17 @@ const useForm = (callback: () => void, validateInfo: { (values: any): {}; (arg0:
     }
 
     const handleSubmit = (e: { preventDefault: () => void; }) =>{
+        e.preventDefault();
+
         setErrors(validateInfo(values));
 
-        AxiosInstance
-            .post("/resetpassword/{}", {
-                password: values.password, 
-                confirm_password: values.confirmPassword,
+        AxiosInstance.post("/verification", {
+                otp: values.otp,
+                email: localStorage.getItem("email"),
             })
             .then((resp) => {
                 if (resp.status === 200) {
+                    localStorage.removeItem("email");
                 setSuccess(true);
                 } else {
                 setErrors({ message: resp.data.message });

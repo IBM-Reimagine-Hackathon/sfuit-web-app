@@ -13,7 +13,7 @@ function Login() {
     return (
         <div>
             <img src="img/login.png" className="form-img-1" />
-            {!isSubmitted ? (<SignIn submitForm={submitForm} history={undefined} />) : <Redirect to="/" />}
+            {!isSubmitted ? (<SignIn submitForm={submitForm} />) : <Redirect to="/" />}
         </div>
     )
 }

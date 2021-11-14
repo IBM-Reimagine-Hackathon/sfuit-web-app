@@ -1,15 +1,13 @@
-import { useState, useEffect, SetStateAction } from "react";
+import { useState, useEffect } from "react";
 import { AxiosInstance } from "../../AxiosInstance";
 
 const useForm = (callback: () => void, value: String) => {
     const [values, setValues] = useState({
         deviceid: ''
     })
-
     const [errors, setErrors] = useState<any>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState<boolean | null>(null);
-    const [confirm, setConfirm] = useState<boolean | null>(null);
 
     const handleChange = (e: { target: { name: any; value: any; }; }) =>{
         const {name, value} = e.target
@@ -21,33 +19,13 @@ const useForm = (callback: () => void, value: String) => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) =>{
         e.preventDefault();
-        
-        AxiosInstance
-        .get("/verify", {
-            params:{
-                deviceId: value
-            }
+        AxiosInstance.post("/verifyDevice", {
+            device_id: value
         })
         .then((resp) => {
             if (resp.status === 200) {
-            localStorage.setItem("deviceId", JSON.stringify(value));
+            localStorage.setItem("deviceId", JSON.stringify(resp.data.device_id));
             setSuccess(true);
-            } else {
-            setErrors({ message: resp.data.message });
-            }
-            setIsSubmitting(true);
-        })
-        .catch((e) => setErrors({ message: "Some thing went wrong" }));
-
-        AxiosInstance
-        .get("/authentication", {
-            params:{
-                deviceId: value
-            }
-        })
-        .then((resp) => {
-            if (resp.status === 200) {
-            setConfirm(true);
             } else {
             setErrors({ message: resp.data.message });
             }
@@ -63,7 +41,7 @@ const useForm = (callback: () => void, value: String) => {
     }, [errors]
     );
 
-    return {handleChange, values, handleSubmit, errors, success, confirm};
+    return {handleChange, values, handleSubmit, errors, success};
 };
 
 export default useForm;

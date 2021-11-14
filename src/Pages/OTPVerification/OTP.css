@@ -1,0 +1,47 @@
+.title-4 {
+    font-size: 7rem;
+    color: #141641;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    letter-spacing: -5px;
+}
+
+.subtitle-4 {
+    font-size: 1.2rem;
+    color: #141641;
+    margin-left: 5rem;
+    margin-top: -4rem;
+}
+
+.form-4 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 0 5rem;
+    width: 25vw;
+}
+
+@media screen and (max-width: 960px){
+
+    .title-4 {
+        font-size: 3.5rem;
+        margin: 0;
+        margin-top: 5rem;
+        text-align: center;
+        letter-spacing: normal;
+    }
+    
+    .subtitle-4 {
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .form-4 {
+        width: 70vw;
+        margin: 25rem 0 0 -2.5rem;
+    }
+
+}

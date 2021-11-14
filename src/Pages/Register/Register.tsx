@@ -14,7 +14,7 @@ function Register() {
     return (
         <div>
             <img src="img/register.png" className="form-img" />
-            {!isSubmitted ? (<SignUp submitForm={submitForm} history={undefined} />) : (<Redirect to="/register/verification" />)}
+            {!isSubmitted ? (<SignUp submitForm={submitForm} />) : (<Redirect to="/register/verification" />)}
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Verify from "./Verify";
-import "./Verification.css";
+import OTP from "./OTP";
+// import "./Verification.css";
 import { Redirect } from "react-router-dom";
 
-function Verification() {
+function OTPVerification() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
@@ -12,14 +12,14 @@ function Verification() {
 
   return (
     <div>
-      <img src="img/verify.png" className="form-img-2" />
+      <img src="img/otp.png" className="form-img-2" />
       {!isSubmitted ? (
-        <Verify submitForm={submitForm} />
+        <OTP submitForm={submitForm} />
       ) : (
-        <Redirect to="/register" />
+        <Redirect to="/login" />
       )}
     </div>
   );
 }
 
-export default Verification;
+export default OTPVerification;

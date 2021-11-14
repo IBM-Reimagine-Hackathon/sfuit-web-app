@@ -1,4 +1,4 @@
-export default function validateInfo(values: { email: string; name: string; password: string; confirmPassword: string; }){
+export default function validateInfo(values: { email: string; name: string; dob: string; phone: string; password: string; confirmPassword: string; }){
     let errors: any = {};
 
     if(!values.email){
@@ -10,6 +10,14 @@ export default function validateInfo(values: { email: string; name: string; pass
 
     if(!values.name.trim()){
         errors.name = "Name required"
+    }
+
+    if(!values.dob){
+        errors.dob = "Date Of Birth is required"
+    }
+
+    if(!values.phone){
+        errors.phone = "Phone Number is required"
     }
 
     if(!values.password){

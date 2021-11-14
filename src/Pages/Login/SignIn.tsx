@@ -1,23 +1,25 @@
 import React, { useEffect } from "react";
 import useForm from "./useForm";
 import validateInfo from "./validateInfo";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 
-function SignIn({ submitForm, history }:{submitForm: any; history: any}) {
+function SignIn({ submitForm }:{submitForm: any;}) {
   const { handleChange, values, handleSubmit, errors, success } = useForm(
     submitForm,
     validateInfo
   );
+
+  let history = useHistory();
 
   useEffect(() => {
     errors.message && toast.error(errors.message);
     errors.email && toast.error(errors.email);
   }, [errors]);
   useEffect(() => {
-    success && history.push("/");
+    success && history.push('/');
   }, [success]);
 
   return (
@@ -61,8 +63,7 @@ function SignIn({ submitForm, history }:{submitForm: any; history: any}) {
             <ToastContainer />
           </div>
           <span className="form-input-login-1">
-            <Link to="/verification">Create an account</Link> |{" "}
-            <Link to="/forgotpassword">Forgot Password</Link>
+            Don't have an account? <Link to="/verification">Create an account</Link>{" "}
           </span>
         </form>
       </div>

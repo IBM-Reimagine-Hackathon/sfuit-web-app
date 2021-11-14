@@ -1,15 +1,16 @@
     .title-2 {
-    font-size: 10rem;
-    text-align: start;
-    color: #141641;
-    margin-left: 5rem;
+      font-size: 10rem;
+      color: #141641;
+      margin-left: 5rem;
+      margin-top: -0.5rem;
+      letter-spacing: -5px;
     }
 
     .subtitle-2 {
-        font-size: 25px;
-        text-align: start;
-        color: #141641;
-        margin-left: 7.5rem;
+      font-size: 1.5rem;
+      color: #141641;
+      margin-left: 7rem;
+      margin-top: -6.5rem;
     }
 
     .subtitle-2 span{
@@ -28,7 +29,7 @@
   .demo{
     position: relative;
     background: url("/img/demo.png");
-    transform: translate(150%, 5%);
+    transform: translate(150%, 0%);
   }
 
   .demo-2{
@@ -66,8 +67,9 @@
       color: #141641;
       border-top-left-radius: 18px;
       border-bottom-left-radius: 18px;
-      height: 44px;
+      height: 2.75rem;
       margin-left: 1px;
+      margin-top: -1rem;
   }
   
   .form-input-2 {
@@ -75,8 +77,9 @@
     padding-left: 10px;
     outline: none;
     border-radius: 15px;
-    height: 45px;
+    height: 2.5rem;
     width: 100%;
+    margin-top: -1rem;
     border: 1px solid #9a9191;
   }
   
@@ -105,12 +108,13 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 50px;
+    height: 3rem;
     color: #fff;
     outline: none;
     user-select: none;
     background-color: transparent;
     border: none;
+    font-size: 1.2rem;
     cursor: pointer;
   }
   
@@ -121,7 +125,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 50px;
+    height: 1.2rem;
     color: #fff;
     outline: none;
     user-select: none;
@@ -158,7 +162,7 @@
     .title-2 {
         font-size: 6rem;
         margin: 0;
-        margin-top: 5rem;
+        margin-top: 1rem;
         text-align: center;
     }
     

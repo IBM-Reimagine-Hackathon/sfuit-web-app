@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Modal from '../../Components/Modal/Modal';
-//import validateInfo from './validateInfo';
 import useForm from './useForm';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './Verification.css'
+import { useHistory } from 'react-router-dom';
 
-function Verify({submitForm, history}:{submitForm : any; history : any}){
+function Verify({submitForm}:{submitForm : any;}){
     const[value, setValue] = useState("");
-    const {handleChange, values, handleSubmit, errors, success, confirm} = useForm(submitForm, value);{/*validateInfo*/}
+    const {handleChange, values, handleSubmit, errors, success} = useForm(submitForm, value);
 
     const[openModal, setOpenModal] = useState(false)
 
@@ -16,12 +16,14 @@ function Verify({submitForm, history}:{submitForm : any; history : any}){
         setValue(childdata1);
     }
 
+    let history = useHistory();
+
     useEffect(() => {
         errors.message && toast.error(errors.message);
         errors.deviceid && toast.error(errors.deviceid);
       }, [errors]);
       useEffect(() => {
-        success && confirm && history.push("/register");
+        success && history.push("/register");
       }, [success]);
 
     return (
@@ -33,8 +35,8 @@ function Verify({submitForm, history}:{submitForm : any; history : any}){
             <img src="img/verify.png" alt="" className="demo-2" />
             <form className="form-2" onSubmit={handleSubmit} noValidate>
                 <div className="form-inputs-2">
-                    <div className="inputcolor">1</div>
-                    <input id="deviceid" type="text" name="deviceid" autoComplete="off" className="form-input-2" style={{textAlign: "center"}} required placeholder="Enter Code" value={value} onChange={handleChange}></input>
+                    <div className="inputcolor"></div>
+                    <input id="deviceid" type="text" name="deviceid" autoComplete="off" className="form-input-2" style={{textAlign: "center"}} required placeholder="Enter Code" value={value} ></input>
                 </div>
                 {errors.deviceid && <p>{errors.deviceid}</p>}
                 <div className="form-input-btn-2" onClick={() => {setOpenModal(true)}}>

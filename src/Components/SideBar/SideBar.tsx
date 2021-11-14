@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Overlay from "../Overlay/Overlay";
 import "./SideBar.css";
 
@@ -18,6 +19,13 @@ const SideBar = () => {
 
   function showOverlay(){
     setShow(!show);
+  }
+
+  let history = useHistory();
+
+  function logout(){
+    localStorage.removeItem("sfuit");
+    history.push('/login');
   }
 
   return (
@@ -45,7 +53,7 @@ const SideBar = () => {
           </ul>
           <div className={active ? "logout show" : "logout"}>
             <ul>
-              <li><i className="fas fa-sign-out-alt"></i> Logout</li>
+              <li onClick={logout}><i className="fas fa-sign-out-alt"></i> Logout</li>
             </ul>
           </div>
         </div>
