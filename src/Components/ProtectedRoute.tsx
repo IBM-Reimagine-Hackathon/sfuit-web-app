@@ -2,17 +2,17 @@ import React from "react";
 import { Redirect, Route } from "react-router-dom";
 
 function ProtectedRoute({ component: Component, ...otherProps }: any){
-  const sfuit = JSON.parse(localStorage.getItem("sfuit") || '{}');
-  const authenticated = sfuit.token ? true : false;
+  const sfuit = localStorage.getItem("deviceId");
+  const device = sfuit ? true : false;
   return (
     <Route
       {...otherProps}
       render={(props) => {
-        return authenticated ? (
+        return device ? (
           <Component {...props} />
         ) : (
           <Redirect
-            to={otherProps.redirectTo ? otherProps.redirectTo : "/login"}
+            to={otherProps.redirectTo ? otherProps.redirectTo : "/verification"}
           />
         );
       }}
