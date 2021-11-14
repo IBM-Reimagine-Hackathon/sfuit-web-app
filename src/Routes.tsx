@@ -10,14 +10,16 @@ import Error404 from "./Pages/Error404/Error404";
 import OTPVerification from "./Pages/OTPVerification/OTPVerification";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import SecureRoute from "./Components/SecureRoute";
+import Analysis from "./Pages/Analysis/Analysis";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
         <PrivateRoute path="/" exact component={Dashboard} />
-        <Route path="/login" exact component={Login} />
+        <PrivateRoute path="/analysis" exact component={Analysis} />
         <ProtectedRoute path="/register" exact component={Register} />
+        <Route path="/login" exact component={Login} />
         <Route path="/verification" exact component={Verification} />
         <SecureRoute path="/register/verification" exact component={EmailVerification} />
         <SecureRoute path="/verifyEmail" exact component={OTPVerification} />

@@ -28,7 +28,8 @@ const useForm = (callback: () => void, validateInfo: (arg0: { email: string; pas
     })
       .then((resp) => {
         if (resp.status === 200) {
-         
+          localStorage.setItem("name", JSON.stringify(resp.data.name));
+          localStorage.setItem("dob", JSON.stringify(resp.data.dob));
           localStorage.setItem("sfuit", JSON.stringify({token:resp.data.token}));
           setSuccess(true);
         } else {
