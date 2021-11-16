@@ -31,6 +31,7 @@ const useForm = (callback: () => void, validateInfo: (arg0: { email: string; pas
           localStorage.setItem("name", JSON.stringify(resp.data.name));
           localStorage.setItem("dob", JSON.stringify(resp.data.dob));
           localStorage.setItem("sfuit", JSON.stringify({token:resp.data.token}));
+          localStorage.setItem("device_id", resp.data.device_id);
           setSuccess(true);
         } else {
           setErrors({ message: resp.data.message });

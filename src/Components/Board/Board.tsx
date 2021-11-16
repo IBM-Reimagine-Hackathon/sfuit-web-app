@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import socket from '../../Socket';
 import './Board.css'
 
 function Board() {
+    const device_id: any=localStorage.getItem('device_id')
+    const[pulse, setPulse] = useState<string>('0');
+    const[spo, setSpo] = useState<string>('0');
+    const[temp, setTemp] = useState<string>('0');
+    useEffect(()=>{
+        socket.on(device_id,(Data: any)=>{
+            setPulse(Data.data.Pulse);
+            setSpo(Data.data.SpO2);
+            setTemp(Data.data.temperature);
+        })
+    },[])
     var time = new Date();
     var hours = (time.getHours()<10?'0':'') + time.getHours();
     var minutes = (time.getMinutes()<10?'0':'') + time.getMinutes();
@@ -17,11 +29,11 @@ function Board() {
             <div className='first-row'>
                 <div className='card temp'>
                     <div className='name'>Temperature</div>
-                    <div className='value'>37<sup><span className='sup'></span></sup>C</div>
+                    <div className='value'>{Math.trunc(parseInt(temp))}<sup><span className='sup'></span></sup>C</div>
                 </div>
                 <div className='card oxy'>
                     <div className='name'>Oxygen</div>
-                    <div className='value'>98</div>
+                    <div className='value'>{Math.trunc(parseInt(spo))}</div>
                 </div>
                 <div className='card time'>
                     <div className='name'>Time Spent</div>
@@ -33,7 +45,7 @@ function Board() {
                     <div className='name'>Pulse</div>
                     <div className='semi-circle'></div>
                     <div className='quarter-circle'></div>
-                    <div className='value move-bottom'>99 <sub>bpm</sub></div>
+                    <div className='value move-bottom'>{Math.trunc(parseInt(pulse))} <sub>bpm</sub></div>
                 </div>
                 <div className='card steps'>
                     <div className='name'>Steps</div>
