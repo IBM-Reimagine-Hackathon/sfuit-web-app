@@ -24,7 +24,7 @@ const useForm = (callback: () => void, value: String) => {
         })
         .then((resp) => {
             if (resp.status === 200) {
-            localStorage.setItem("deviceId", JSON.stringify(resp.data.device_id));
+            localStorage.setItem("deviceId", resp.data.device_id);
             setSuccess(true);
             } else {
             setErrors({ message: resp.data.message });

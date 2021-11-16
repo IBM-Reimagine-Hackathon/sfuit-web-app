@@ -25,8 +25,8 @@ const useForm = (callback: () => void, validateInfo: (arg0: { otp: string; }) =>
         setErrors(validateInfo(values));
 
         AxiosInstance.post("/verification", {
-                otp: values.otp,
                 email: localStorage.getItem("email"),
+                otp: values.otp,
             })
             .then((resp) => {
                 if (resp.status === 200) {
