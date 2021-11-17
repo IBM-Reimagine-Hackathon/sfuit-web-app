@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import OTP from "./OTP";
-// import "./Verification.css";
 import { Redirect } from "react-router-dom";
 
 function OTPVerification() {

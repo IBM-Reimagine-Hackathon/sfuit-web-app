@@ -8,7 +8,7 @@ const useForm = (callback: () => void, validateInfo: (arg0: { email: string; pas
   });
 
   const [errors, setErrors] = useState<any>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean | null>(null);
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {

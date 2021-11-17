@@ -4,7 +4,8 @@ import './Login.css';
 import { Redirect } from 'react-router-dom';
 
 function Login() {
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+
 
     function submitForm(){
         setIsSubmitted(true);

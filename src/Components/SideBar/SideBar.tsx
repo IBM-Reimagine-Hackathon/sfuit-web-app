@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import Overlay from "../Overlay/Overlay";
+import { useHistory } from "react-router-dom";
 import "./SideBar.css";
 
 const SideBar = () => {
@@ -34,22 +33,18 @@ const SideBar = () => {
     setActive(!active);
   }
 
-  function showOverlay(){
-    setShow(!show);
-  }
-
   let history = useHistory();
 
   function logout(){
     localStorage.removeItem("sfuit");
     localStorage.removeItem("name");
     localStorage.removeItem("dob");
+    localStorage.removeItem("device_id");
     history.push('/login');
   }
   return (
     <div>
       <div className={show ? "show" : "hide"}>
-      <Overlay />
       </div>
       <nav className={open}>
         <div className="menu-icons">
@@ -58,11 +53,6 @@ const SideBar = () => {
         </div>
       <div className="sidebar-container">
         <div className="logo">S<span>f</span>UIT</div>
-        <ul className="nav-list">
-          <Link to="/" className="color"><li className="nav-items"><i className="fas fa-home"></i>Home</li></Link>
-          <li className="nav-items" onClick={showOverlay}><i className="fas fa-bell"><i className="fas fa-circle"></i></i>Notifications</li>
-          <Link to="/analysis" className="color"><li className="nav-items"><i className="fas fa-chart-line"></i>Analysis</li></Link>
-        </ul>
         <div className="profile-container">
           <div className="profile-picture">{initial}</div>
           <ul className="profile-details">

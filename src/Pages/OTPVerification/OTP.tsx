@@ -26,22 +26,6 @@ function OTP({submitForm}:{submitForm : any;}){
             <h3 className="subtitle-4">Enter OTP to verify your Email Address</h3>
         <div className="form-content-right">
             <form className="form-4" onSubmit={handleSubmit} noValidate>
-                {/* <div className="form-inputs">
-                    <input 
-                        id="email" 
-                        type="email"
-                        name="email" 
-                        autoComplete="off" 
-                        className="form-input" 
-                        disabled
-                        style={{textAlign: "left", padding: "20px"}} 
-                        required 
-                        placeholder="Email Address" 
-                        value={} 
-                        onChange={handleChange}
-                    ></input>
-                    {errors.email && <p>{errors.email}</p>}
-                </div> */}
                 <div className="form-inputs">
                     <input 
                         id="otp" 
