@@ -26,7 +26,7 @@ function Board() {
             <div className='first-row'>
                 <div className='card temp'>
                     <div className='name'>Temperature</div>
-                    <div className='value'>{Math.trunc(parseInt(temp))}<sup><span className='sup'></span></sup>F</div>
+                    <div className='value'>{parseInt(temp) > 85 && parseInt(temp) < 99 ? Math.trunc(parseInt(temp)) : '32'}<sup><span className='sup'></span></sup>F</div>
                 </div>
                 <div className='card oxy'>
                     <div className='name'>Oxygen</div>
