@@ -8,6 +8,7 @@ function Board() {
     const[spo, setSpo] = useState<string>('0');
     const[temp, setTemp] = useState<string>('32');
     const[deviceId, setDeviceId] = useState<string>('');
+    const[std, setStd] = useState<string>('32');
     useEffect(()=>{
         socket.on(device_id,(Data: any)=>{
             setPulse(Data.data.Pulse);
@@ -26,7 +27,7 @@ function Board() {
             <div className='first-row'>
                 <div className='card temp'>
                     <div className='name'>Temperature</div>
-                    <div className='value'>{parseInt(temp) > 85 && parseInt(temp) < 99 ? Math.trunc(parseInt(temp)) : '32'}<sup><span className='sup'></span></sup>F</div>
+                    <div className='value'>{parseInt(temp) > 85 && parseInt(temp) < 99 ? Math.trunc(parseInt(temp)) && setStd(temp) : std}<sup><span className='sup'></span></sup>F</div>
                 </div>
                 <div className='card oxy'>
                     <div className='name'>Oxygen</div>
