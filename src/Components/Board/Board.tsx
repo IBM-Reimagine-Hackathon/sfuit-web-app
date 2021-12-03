@@ -35,7 +35,7 @@ function Board() {
                 </div>
                 <div className='card time'>
                     <div className='name'>Time Spent</div>
-                    <div className='value'>0h 26m</div>
+                    <div className='value'>0h 0m</div>
                 </div>
             </div>
             <div className='second-row'>
